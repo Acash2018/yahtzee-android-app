@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Checked = will re-roll (bright) -->
+    <item android:state_checked="true" android:drawable="@drawable/die3"/>
+    <!-- Unchecked = held (dim) -->
+    <item android:drawable="@drawable/die3_dim"/>
+</selector>

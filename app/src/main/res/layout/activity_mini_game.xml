@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <!-- Dice Row -->
+    <LinearLayout
+        android:id="@+id/diceRow"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:padding="12dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <ToggleButton
+            android:id="@+id/die0"
+            android:layout_width="0dp"
+            android:layout_height="84dp"
+            android:layout_weight="1"
+            android:textOff=""
+            android:textOn=""
+            android:background="@drawable/die1_selector" />
+
+        <ToggleButton
+            android:id="@+id/die1"
+            android:layout_width="0dp"
+            android:layout_height="84dp"
+            android:layout_weight="1"
+            android:textOff=""
+            android:textOn=""
+            android:background="@drawable/die1_selector" />
+
+        <ToggleButton
+            android:id="@+id/die2"
+            android:layout_width="0dp"
+            android:layout_height="84dp"
+            android:layout_weight="1"
+            android:textOff=""
+            android:textOn=""
+            android:background="@drawable/die1_selector" />
+
+        <ToggleButton
+            android:id="@+id/die3"
+            android:layout_width="0dp"
+            android:layout_height="84dp"
+            android:layout_weight="1"
+            android:textOff=""
+            android:textOn=""
+            android:background="@drawable/die1_selector" />
+
+        <ToggleButton
+            android:id="@+id/die4"
+            android:layout_width="0dp"
+            android:layout_height="84dp"
+            android:layout_weight="1"
+            android:textOff=""
+            android:textOn=""
+            android:background="@drawable/die1_selector" />
+    </LinearLayout>
+
+    <!-- Spacer -->
+    <View
+        android:id="@+id/diceSpacer"
+        android:layout_width="0dp"
+        android:layout_height="12dp"
+        app:layout_constraintTop_toBottomOf="@id/diceRow"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Roll buttons -->
+    <LinearLayout
+        android:id="@+id/rollRow"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:paddingHorizontal="12dp"
+        app:layout_constraintTop_toBottomOf="@id/diceSpacer"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <Button
+            android:id="@+id/btnRollAll"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Roll All Dice" />
+
+        <Button
+            android:id="@+id/btnRollChosen"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Roll Chosen" />
+
+        <TextView
+            android:id="@+id/tvRollsLeft"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingStart="8dp"
+            android:text="Rolls left: 3" />
+    </LinearLayout>
+
+    <!-- Two-column RadioGroup layout -->
+    <!-- Two-column Category Layout -->
+    <LinearLayout
+        android:id="@+id/categoryLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="12dp"
+        app:layout_constraintTop_toBottomOf="@id/rollRow"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <!-- Category Selection (Single Column) -->
+        <RadioGroup
+            android:id="@+id/rgMiniCategories"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="12dp"
+            app:layout_constraintTop_toBottomOf="@id/rollRow"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
+
+            <RadioButton
+                android:id="@+id/rbOnes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Ones" />
+
+            <RadioButton
+                android:id="@+id/rbTwos"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Twos" />
+
+            <RadioButton
+                android:id="@+id/rbThrees"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Threes" />
+
+            <RadioButton
+                android:id="@+id/rbFours"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Fours" />
+
+            <RadioButton
+                android:id="@+id/rbFives"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Fives" />
+
+            <RadioButton
+                android:id="@+id/rbSixes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Sixes" />
+
+
+
+        </RadioGroup>
+
+
+
+
+
+
+    </LinearLayout>
+
+
+    <!-- Bottom row -->
+    <LinearLayout
+        android:id="@+id/bottomRow"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:padding="12dp"
+        app:layout_constraintTop_toBottomOf="@id/categoryLayout"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <Button
+            android:id="@+id/btnCommit"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Choose (0 pts)" />
+
+        <TextView
+            android:id="@+id/tvScore"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Score: 0"
+            android:paddingStart="12dp" />
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
